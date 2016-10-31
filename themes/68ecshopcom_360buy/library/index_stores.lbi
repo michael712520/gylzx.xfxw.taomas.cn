@@ -1,0 +1,23 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="store-rec-slide clearfix"> 
+ 
+         <!--{foreach from=$supplier_logo item=supp name=supp}--> 
+            <!--{foreach from=$supp item=info name=info}--> 
+            <a class="store-item {if $smarty.foreach.info.iteration mod 6 eq 0}store-item-spe{/if} item-row-{$smarty.foreach.supp.index} item-col-{$smarty.foreach.info.index}" href="{$info.shop_url}" target="_blank"> 
+            	<img class="store-logo" src="{$info.shop_logo}" title="{$info.shop_name}" alt="{$info.shop_name}" height="45" width="90"> 
+            </a> 
+            <!--{/foreach}--> 
+            <!--{/foreach}--> 
+  
+</div>
+<script>
+function qiehuan(num){
+	Ajax.call('other.php?act=supplier_tag', 'id=' + num, qiehuanResponse, 'GET', 'JSON');
+}
+function qiehuanResponse(result){
+	document.getElementById('index-store').innerHTML = result.result;
+		$(".store-con img").each(function(k,img){
+		new JumpObj(img,10);
+	});
+}
+</script>
