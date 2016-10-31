@@ -1,4 +1,4 @@
-<?php exit;?>a:3:{s:8:"template";a:12:{i:0;s:54:"E:/workspace/gylzx/themes/68ecshopcom_360buy/index.dwt";i:1;s:74:"E:/workspace/gylzx/themes/68ecshopcom_360buy/library/page_header_index.lbi";i:2;s:68:"E:/workspace/gylzx/themes/68ecshopcom_360buy/library/user_header.lbi";i:3;s:65:"E:/workspace/gylzx/themes/68ecshopcom_360buy/library/index_ad.lbi";i:4;s:69:"E:/workspace/gylzx/themes/68ecshopcom_360buy/library/cat_articles.lbi";i:5;s:82:"E:/workspace/gylzx/themes/68ecshopcom_360buy/library/recommend_right_promotion.lbi";i:6;s:70:"E:/workspace/gylzx/themes/68ecshopcom_360buy/library/recommend_hot.lbi";i:7;s:66:"E:/workspace/gylzx/themes/68ecshopcom_360buy/library/cat_goods.lbi";i:8;s:70:"E:/workspace/gylzx/themes/68ecshopcom_360buy/library/right_sidebar.lbi";i:9;s:74:"E:/workspace/gylzx/themes/68ecshopcom_360buy/library/page_footer_index.lbi";i:10;s:70:"E:/workspace/gylzx/themes/68ecshopcom_360buy/library/arrive_notice.lbi";i:11;s:69:"E:/workspace/gylzx/themes/68ecshopcom_360buy/library/left_sidebar.lbi";}s:7:"expires";i:1477563903;s:8:"maketime";i:1477560303;}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php exit;?>a:3:{s:8:"template";a:12:{i:0;s:69:"E:/workspace/gylzx.xfxw.taomas.cn/themes/68ecshopcom_360buy/index.dwt";i:1;s:89:"E:/workspace/gylzx.xfxw.taomas.cn/themes/68ecshopcom_360buy/library/page_header_index.lbi";i:2;s:83:"E:/workspace/gylzx.xfxw.taomas.cn/themes/68ecshopcom_360buy/library/user_header.lbi";i:3;s:80:"E:/workspace/gylzx.xfxw.taomas.cn/themes/68ecshopcom_360buy/library/index_ad.lbi";i:4;s:84:"E:/workspace/gylzx.xfxw.taomas.cn/themes/68ecshopcom_360buy/library/cat_articles.lbi";i:5;s:97:"E:/workspace/gylzx.xfxw.taomas.cn/themes/68ecshopcom_360buy/library/recommend_right_promotion.lbi";i:6;s:85:"E:/workspace/gylzx.xfxw.taomas.cn/themes/68ecshopcom_360buy/library/recommend_hot.lbi";i:7;s:81:"E:/workspace/gylzx.xfxw.taomas.cn/themes/68ecshopcom_360buy/library/cat_goods.lbi";i:8;s:85:"E:/workspace/gylzx.xfxw.taomas.cn/themes/68ecshopcom_360buy/library/right_sidebar.lbi";i:9;s:89:"E:/workspace/gylzx.xfxw.taomas.cn/themes/68ecshopcom_360buy/library/page_footer_index.lbi";i:10;s:85:"E:/workspace/gylzx.xfxw.taomas.cn/themes/68ecshopcom_360buy/library/arrive_notice.lbi";i:11;s:84:"E:/workspace/gylzx.xfxw.taomas.cn/themes/68ecshopcom_360buy/library/left_sidebar.lbi";}s:7:"expires";i:1477897359;s:8:"maketime";i:1477893759;}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <base href="http://gylzx.xfxw.taomas.cn/" />
@@ -1776,6 +1776,26 @@ $(function(){
 								<div class="brand-con">
 									<ul class="yyyy_474"  style="position: absolute; width: 1210px; height: 40px; top: 0px; left: 1px;">
 																				<li class="fore1">
+											<a href="category.php?id=474&amp;brand=110" target="_blank" title="舒肤佳">
+												<img width="100" height="40" src="data/brandlogo/1466492698981354390.jpg" alt="舒肤佳">
+											</a>
+										</li>
+																				<li >
+											<a href="category.php?id=474&amp;brand=123" target="_blank" title="全无敌">
+												<img width="100" height="40" src="data/brandlogo/1467018926194479855.jpg" alt="全无敌">
+											</a>
+										</li>
+																				<li >
+											<a href="category.php?id=474&amp;brand=119" target="_blank" title="蜂花">
+												<img width="100" height="40" src="data/brandlogo/1467017580686105755.jpg" alt="蜂花">
+											</a>
+										</li>
+																				<li >
+											<a href="category.php?id=474&amp;brand=115" target="_blank" title="大宝">
+												<img width="100" height="40" src="data/brandlogo/1466492867134683177.jpg" alt="大宝">
+											</a>
+										</li>
+																				<li >
 											<a href="category.php?id=474&amp;brand=127" target="_blank" title="妙管家">
 												<img width="100" height="40" src="data/brandlogo/1467019205420099947.jpg" alt="妙管家">
 											</a>
@@ -1823,26 +1843,6 @@ $(function(){
 																				<li >
 											<a href="category.php?id=474&amp;brand=111" target="_blank" title="六神">
 												<img width="100" height="40" src="data/brandlogo/1466492744044803006.jpg" alt="六神">
-											</a>
-										</li>
-																				<li >
-											<a href="category.php?id=474&amp;brand=125" target="_blank" title="佳洁士">
-												<img width="100" height="40" src="data/brandlogo/1467019018506358208.jpg" alt="佳洁士">
-											</a>
-										</li>
-																				<li >
-											<a href="category.php?id=474&amp;brand=107" target="_blank" title="飘柔">
-												<img width="100" height="40" src="data/brandlogo/1466491247631662974.jpg" alt="飘柔">
-											</a>
-										</li>
-																				<li >
-											<a href="category.php?id=474&amp;brand=117" target="_blank" title="蓝月亮">
-												<img width="100" height="40" src="data/brandlogo/1466492915964913016.jpg" alt="蓝月亮">
-											</a>
-										</li>
-																				<li >
-											<a href="category.php?id=474&amp;brand=130" target="_blank" title="七度空间">
-												<img width="100" height="40" src="data/brandlogo/1467019321287120551.jpg" alt="七度空间">
 											</a>
 										</li>
 																			</ul>
@@ -2829,6 +2829,16 @@ $(function(){
 								<div class="brand-con">
 									<ul class="yyyy_475"  style="position: absolute; width: 1210px; height: 40px; top: 0px; left: 1px;">
 																				<li class="fore1">
+											<a href="category.php?id=475&amp;brand=146" target="_blank" title="海神">
+												<img width="100" height="40" src="data/brandlogo/1466491399217998649.jpg" alt="海神">
+											</a>
+										</li>
+																				<li >
+											<a href="category.php?id=475&amp;brand=153" target="_blank" title="天天旺">
+												<img width="100" height="40" src="data/brandlogo/1467019166645039139.jpg" alt="天天旺">
+											</a>
+										</li>
+																				<li >
 											<a href="category.php?id=475&amp;brand=155" target="_blank" title="镇江">
 												<img width="100" height="40" src="data/brandlogo/1467019240974229255.jpg" alt="镇江">
 											</a>
@@ -2869,13 +2879,13 @@ $(function(){
 											</a>
 										</li>
 																				<li >
-											<a href="category.php?id=475&amp;brand=146" target="_blank" title="海神">
-												<img width="100" height="40" src="data/brandlogo/1466491399217998649.jpg" alt="海神">
+											<a href="category.php?id=475&amp;brand=173" target="_blank" title="田汁坊">
+												<img width="100" height="40" src="data/brandlogo/" alt="田汁坊">
 											</a>
 										</li>
 																				<li >
-											<a href="category.php?id=475&amp;brand=153" target="_blank" title="天天旺">
-												<img width="100" height="40" src="data/brandlogo/1467019166645039139.jpg" alt="天天旺">
+											<a href="category.php?id=475&amp;brand=171" target="_blank" title="安琪">
+												<img width="100" height="40" src="data/brandlogo/" alt="安琪">
 											</a>
 										</li>
 																				<li >
@@ -2886,16 +2896,6 @@ $(function(){
 																				<li >
 											<a href="category.php?id=475&amp;brand=168" target="_blank" title="乐福">
 												<img width="100" height="40" src="data/brandlogo/" alt="乐福">
-											</a>
-										</li>
-																				<li >
-											<a href="category.php?id=475&amp;brand=157" target="_blank" title="八公山">
-												<img width="100" height="40" src="data/brandlogo/" alt="八公山">
-											</a>
-										</li>
-																				<li >
-											<a href="category.php?id=475&amp;brand=163" target="_blank" title="六月鲜">
-												<img width="100" height="40" src="data/brandlogo/" alt="六月鲜">
 											</a>
 										</li>
 																			</ul>
@@ -3672,7 +3672,7 @@ $(function(){
                                                                                 <img src="themes/68ecshopcom_360buy/images/people.gif" />
                                                                             </div>
                                     <div class="user-info">
-                                    	<p>用户名：kkk</p>
+                                    	<p>用户名：u197SFLY3864</p>
                                         <p>级　别：普通会员</p>
                                     </div>
                                 </div>
@@ -3876,7 +3876,7 @@ $(function(){
                     <input type="text" id="authcode" name="captcha" class="text text-1" tabindex="3" placeholder="验证码"/>
                 </div>
                 <label class="img fl">
-                    <img src="captcha.php?is_login=1&1289407643" alt="captcha" style="vertical-align: middle;cursor: pointer;" onClick="this.src='captcha.php?is_login=1&'+Math.random()" />
+                    <img src="captcha.php?is_login=1&704632427" alt="captcha" style="vertical-align: middle;cursor: pointer;" onClick="this.src='captcha.php?is_login=1&'+Math.random()" />
                 </label>
             </div>
                         <div class="safety" id="autoentry">

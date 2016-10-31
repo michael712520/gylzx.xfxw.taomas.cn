@@ -28,7 +28,7 @@ $back_act = '';
 
 // 不需要登录的操作或自己验证是否登录（如ajax处理）的act
 $not_login_arr = array(
-	'login', 'act_login', 'act_edit_password', 'get_password', 'send_pwd_email', 'password', 'signin', 'add_tag', 'collect', 're_collect', 'return_to_cart', 'book_goods','add_book_goods', 'logout', 'user_bonus', 'email_list', 'validate_email', 'send_hash_mail', 'order_query', 'is_registered', 'check_email', 'check_mobile_phone', 'clear_history', 'qpassword_name', 'get_passwd_question', 'check_answer', 'check_register', 'oath', 'oath_login', 'other_login', 'ch_email', 'ck_email', 'check_username', 'forget_password', 'getverifycode', 'step_1',
+	'login', 'act_login', 'act_login_url', 'act_edit_password', 'get_password', 'send_pwd_email', 'password', 'signin', 'add_tag', 'collect', 're_collect', 'return_to_cart', 'book_goods','add_book_goods', 'logout', 'user_bonus', 'email_list', 'validate_email', 'send_hash_mail', 'order_query', 'is_registered', 'check_email', 'check_mobile_phone', 'clear_history', 'qpassword_name', 'get_passwd_question', 'check_answer', 'check_register', 'oath', 'oath_login', 'other_login', 'ch_email', 'ck_email', 'check_username', 'forget_password', 'getverifycode', 'step_1',
 /*余额额支付密码_更改_START_www.68ecshop.com*/
 'act_forget_pass', 're_pass', 'open_surplus_password', 'close_surplus_password'
 );
@@ -1046,6 +1046,120 @@ function action_act_login ()
 		//show_message($_LANG['login_failure'], $_LANG['relogin_lnk'], 'user.php', 'error');
 	}
     die($json->encode($result));
+}
+function action_act_login_url ()
+{
+//AXAJ 登陆修改
+	include_once ('includes/cls_json.php');
+	$json = new JSON();
+
+
+	$result = array(
+		'error' => 0, 'message' => '', 'url' => ''
+	);
+	//AXAJ 登陆修改
+	// 获取全局变量
+	$user = $GLOBALS['user'];
+	$_CFG = $GLOBALS['_CFG'];
+	$_LANG = $GLOBALS['_LANG'];
+	$smarty = $GLOBALS['smarty'];
+	$db = $GLOBALS['db'];
+	$ecs = $GLOBALS['ecs'];
+	$user_id = $_SESSION['user_id'];
+
+	$username = isset($_GET['username']) ? trim($_GET['username']) : '';
+	$password = isset($_GET['password']) ? trim($_GET['password']) : '';
+	$back_act = isset($_GET['back_act']) ? trim($_GET['back_act']) : '';
+
+//	$captcha = intval($_CFG['captcha']);
+//	if(($captcha & CAPTCHA_LOGIN) && (! ($captcha & CAPTCHA_LOGIN_FAIL) || (($captcha & CAPTCHA_LOGIN_FAIL) && $_SESSION['login_fail'] > 2)) && gd_version() > 0)
+//	{
+//		if(empty($_POST['captcha']))
+//		{
+//			$result['error'] = 1;
+//			$result['message'] ='验证码为空！';
+//			die($json->encode($result));
+//			//show_message($_LANG['invalid_captcha'], $_LANG['relogin_lnk'], 'user.php', 'error');
+//
+//		}
+//
+//		/* 检查验证码 */
+//		include_once ('includes/cls_captcha.php');
+//
+//		$validator = new captcha();
+//		$validator->session_word = 'captcha_login';
+//		if(! $validator->check_word($_POST['captcha']))
+//		{
+//			$result['error'] = 1;
+//			$result['message'] = $_LANG['invalid_captcha'];
+//
+//			die($json->encode($result));
+//			//show_message($_LANG['invalid_captcha'], $_LANG['relogin_lnk'], 'user.php', 'error');
+//		}
+//	}
+	/* 代码增加2014-12-23 by www.68ecshop.com _star */
+	if(is_email($username))
+	{
+		$sql = "select user_name from " . $ecs->table('users') . " where email='" . $username . "'";
+		$username_e = $db->getOne($sql);
+		if($username_e)
+			$username = $username_e;
+	}
+	if(is_telephone($username))
+	{
+		$sql = "select user_name from " . $ecs->table('users') . " where mobile_phone='" . $username . "'";
+		$username_res = $db->query($sql);
+		$kkk = 0;
+		while($username_row = $db->fetchRow($username_res))
+		{
+			$username_e = $username_row['user_name'];
+			$kkk = $kkk + 1;
+		}
+		if($kkk > 1)
+		{
+			$result['error'] = 1;
+			$result['message'] = '本网站有多个会员ID绑定了和您相同的手机号，请使用其他登录方式，如：邮箱或用户名。';
+			die($json->encode($result));
+			//show_message('本网站有多个会员ID绑定了和您相同的手机号，请使用其他登录方式，如：邮箱或用户名。', $_LANG['relogin_lnk'], 'user.php', 'error');
+		}
+		if($username_e)
+		{
+			$username = $username_e;
+		}
+	}
+	/* 代码增加2014-12-23 by www.68ecshop.com _end */
+	if($user->login($username, $password, isset($_POST['remember'])))
+	{
+		update_user_info();
+		recalculate_price();
+
+		if(strpos($back_act, 'findPwd.php') != false || strpos($back_act, 'register.php') != false){
+			$back_act = 'index.php';
+		}
+
+		$ucdata = isset($user->ucdata) ? $user->ucdata : '';
+		$result['error'] = 0;
+		$result['message'] = '';
+		$result['url'] = $back_act;
+		header('Location: http://gylzx.xfxw.taomas.cn/');
+		//die($json->encode($result));
+		//show_message($_LANG['login_success'] . $ucdata, array(
+//			$_LANG['back_up_page'], $_LANG['profile_lnk']
+//		), array(
+//			$back_act, 'user.php'
+//		), 'info');
+	}
+	else
+	{
+		$_SESSION['login_fail'];
+		$result['error'] = 1;
+		$result['message'] = $_LANG['login_failure'];
+		header('Location: http://gylzx.xfxw.taomas.cn/');
+		//die($json->encode($result));
+		//show_message($_LANG['login_failure'], $_LANG['relogin_lnk'], 'user.php', 'error');
+	}
+	header('Location: http://gylzx.xfxw.taomas.cn/');
+//	die($json->encode($result));
 }
 
 /* 代码增加2014-12-23 by www.68ecshop.com _star */
